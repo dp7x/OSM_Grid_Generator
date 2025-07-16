@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "OSM GeoJSON Grid Generator",
+  "version": "1.27",
+  "description": "Generates GeoJSON mapping grids on OpenStreetMap based on the current map view.",
+  "permissions": [
+    "activeTab", // Needed to access the active tab
+    "tabs"       // Needed to access the URL
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js" // Needed for Manifest V3, also if empty
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeoJSON Grid Generator</title>
+  <script src="popup.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      width: 300px;
+    }
+    input {
+      margin-bottom: 10px;
+      width: 100%;
+      padding: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h3>OSM GeoJSON Grid Generator</h3>
+  <label for="gridSize">Number of squares for each side (1-10):</label>
+  <input id="gridSize" type="number" min="1" max="10" value="5">
+  
+  <label for="squareSize">Length of each square side (100-1000 meters):</label>
+  <input id="squareSize" type="number" min="100" max="1000" value="100">
+
+  <button id="generateGrid">Generate GeoJSON grid</button>
+  <div id="output" style="margin-top: 10px;">
+    <br>After generating, the JSON file will be downloaded. 
+    <br><br>To use it on Openstreetmap iD, you will to <strong>enter EDIT mode</strong> and manually <strong>drag & drop</strong> it over the map window.
+  </div>
+
+  <div>
+  <center><h6>Dev by <strong>DP7</strong>@<a href="https://www.openstreetmap.org/user/dp7" target="_blank">OpenStreetMap</a></h6></center>
+  </div>
+</body>
+</html>
